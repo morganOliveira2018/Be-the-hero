@@ -3,7 +3,7 @@
 </h1>
 <h1 align="center">Semana Omnistack 11.0</h1>
 
-## :Tecnologias
+## Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
@@ -14,4 +14,4 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-O DevRadar é um projeto que visa conectar desenvolvedores próximos a você que trabalham com as mesmas tecnologias.
+O projeto Be the Hero tem o propósito de  Organizações não Governamentais (ONGs) auxiliares encontrarem financiadores (Heróis) de acordo com com cada caso, para que assim possa ajudar em problemas específicos.
