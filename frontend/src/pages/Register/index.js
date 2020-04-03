@@ -1,9 +1,9 @@
 import React , { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
+import api from '../../services/api';
 import './styles.css';
 import logoImg from '../../assets/logo.svg';
-import api from '../../services/api';
 
 export default function Register() {
     const [name, setName] = useState('');
@@ -13,21 +13,28 @@ export default function Register() {
     const [uf, setUf] = useState('');
 
     async function handleRegister(e){
-        e.proventDefault();
+        e.preventDefault();
 
-        const data = {
+        console.log({
             name,
             email,
             whatsapp,
             city,
             uf,
+        })
+        const data = {
+             name,
+             email,
+             whatsapp,
+             city,
+             uf,
         };
         try {
-          const response = await api.post('/ongs', data);
-            alert(`Seu ID de acesso: ${response.data.id}`);
-        } catch (err) {
-            alert('Erro no cadastro, tente novamente.');
-        }
+           const response = await api.post('/ongs', data);
+             alert(`Seu ID de acesso: ${response.data.id}`);
+         } catch (err) {
+             alert('Erro no cadastro, tente novamente.');
+         }
     }
     return (
         <div className="register-container">
@@ -50,7 +57,8 @@ export default function Register() {
                         value={name}
                         onChange={ e => setName(e.target.value)}
                 />
-                <input type="email" 
+                <input  
+                        type="email" 
                         placeholder="E-mail"
                         value={email}
                         onChange={e => setEmail(e.target.value)}
@@ -78,4 +86,4 @@ export default function Register() {
         </div>
         </div>
     );
-}
+  }
