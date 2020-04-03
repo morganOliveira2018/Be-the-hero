@@ -3,7 +3,7 @@
 </h1>
 <h1 align="center">Semana Omnistack 11.0</h1>
 
-## Tecnologias
+## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
