@@ -46,7 +46,7 @@ module.exports = {
          .select('ong_id') 
          .first(); // Retorna o id como único valor, ao invés de um array
 
-        if(incident.ong_id != ong_id){
+        if(incident.ong_id !== ong_id){
             return response.status(401).json({ error: 'Operation not permitted.'});
         }
         await connection('incidents').where('id', id).delete();
